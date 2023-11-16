@@ -19,7 +19,8 @@ class InputController extends Controller
         if (str_contains($_SERVER['SERVER_NAME'], 'localhost'))
         {
             // $this->domain ="http://localhost:8055/";
-            $this->domain ="http://136.198.117.118/";
+            // $this->domain ="http://136.198.117.118/";
+            $this->domain ="https://svr1.jkei.jvckenwood.com/";
         }
     }
     public function index(Request $request)
@@ -28,8 +29,8 @@ class InputController extends Controller
         $limit = isset($request->limit) ? $request->limit : 50;
         $incoming = Http::get($this->domain.$this->url."json/api_inpermonth.php?page=$page&limit=$limit");
         // $incoming = Http::get($this->domain.$this->url."connection.php");
-        return $incoming;
-        return view('incoming', [$incoming]);
+        // return $incoming;
+        return view('incoming', ['incoming' => $incoming]);
     }
 
     /**
