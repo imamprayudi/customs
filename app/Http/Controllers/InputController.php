@@ -19,8 +19,8 @@ class InputController extends Controller
         if (str_contains($_SERVER['SERVER_NAME'], 'localhost'))
         {
             // $this->domain ="http://localhost:8055/";
-            // $this->domain ="http://136.198.117.118/";
-            $this->domain ="https://svr1.jkei.jvckenwood.com/";
+            $this->domain ="http://136.198.117.118/";
+            // $this->domain ="https://svr1.jkei.jvckenwood.com/";
         }
     }
     public function index(Request $request)

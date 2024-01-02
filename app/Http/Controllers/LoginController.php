@@ -43,8 +43,8 @@ class LoginController extends Controller
         // {
             //  mengambil data dari json
             //  **
-            // $response = Http::get('http://136.198.117.118/custom_backend/response/cek_login.php', [
-            $response = Http::get('https://svr1.jkei.jvckenwood.com/custom_backend/response/cek_login.php', [
+            $response = Http::get('http://136.198.117.118/custom_backend/response/cek_login.php', [
+            // $response = Http::get('https://svr1.jkei.jvckenwood.com/custom_backend/response/cek_login.php', [
                 'userid' => $userid,
                 'userpass' => $userpass,
                 'ipaddress' => getenv("REMOTE_ADDR"),
